@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_FCHDETECTION fchdetection)
+
+FIND_PATH(
+    FCHDETECTION_INCLUDE_DIRS
+    NAMES fchdetection/api.h
+    HINTS $ENV{FCHDETECTION_DIR}/include
+        ${PC_FCHDETECTION_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    FCHDETECTION_LIBRARIES
+    NAMES gnuradio-fchdetection
+    HINTS $ENV{FCHDETECTION_DIR}/lib
+        ${PC_FCHDETECTION_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(FCHDETECTION DEFAULT_MSG FCHDETECTION_LIBRARIES FCHDETECTION_INCLUDE_DIRS)
+MARK_AS_ADVANCED(FCHDETECTION_LIBRARIES FCHDETECTION_INCLUDE_DIRS)
+

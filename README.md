@@ -21,3 +21,16 @@
 This program implemented the algorithm of "Robust Frequency Burst Detection Algorithm for 
 GSM/GPRS",G. Narendra Varma, Usha Sahu, G. Prabhu Charan. The copyright of this algorithm
 remains to them. Be careful when you use it.
+
+#Usage
+
+<pre><code>
+mkdir build
+cd build
+cmake ../
+make
+./python/qa_detect_test.sh > somefile.output
+</code></pre>
+
+
+Then you can plot the "somefile.output" with any tools (matlab,matplotlib...) you like.

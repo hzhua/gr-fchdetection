@@ -109,6 +109,13 @@ namespace gr {
                             tot_en += norm(in[j]);
                         }
 
+                        if(tot_en/taps.size() < 0.1){
+                            
+                        //printfi("i=%d\n" , i);
+                        //getchar();
+                            continue;
+                        }
+
                         float G = 1.0/tot_en;
 
 
@@ -137,7 +144,7 @@ namespace gr {
                         }
                         //printf("i = %d %.4f G = %.4f in = %.4f out = %.4f diff = %.4f\n" ,i, avg_e ,G, norm(in[i]) , norm(out[i]), norm(e));
                         //if(norm(e) > 1){getchar();}
-                        printf("%.4f\n", norm(avg_e)/avg_sig);
+                        printf("%.4f\n", norm(avg_e));
                         
                     }
 

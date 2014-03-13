@@ -34,14 +34,14 @@ class qa_detect (gr_unittest.TestCase):
 
     def test_001_t (self):
         # set up fg
-        sample_rate = 280e3
+        sample_rate = 400e3
         ampl = 0.1
         file_src = blocks.file_source(8, "/home/hzhua/gr_learn/gr-fchdetection/python/943.125_300kHz.cfile", False)
-        #src0 = analog.sig_source_c(sample_rate, analog.GR_SIN_WAVE, 60e3, 1.0)
+        #file_src = analog.sig_source_c(sample_rate, analog.GR_SIN_WAVE, 120e3, 1.0)
         #src1 = analog.noise_source_c(analog.GR_GAUSSIAN, 0.3)
         add  = blocks.add_cc();
-        taps = filter.firdes.low_pass(1, sample_rate, 70e3, 10e3)
- 
+        #taps = filter.firdes.low_pass(1, sample_rate, 70e3, 10e3)
+        taps = filter.firdes.band_pass(1, sample_rate, 67.7033e3-18e3, 67.7033e3+18e3, 10e3)
         detect = fchdetection.detect(taps)
         
         #dst = file.sink(sample_rate, "")fff

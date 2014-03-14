@@ -31,6 +31,6 @@ gr-fchdetection/python$ ./python/detect.py -I input.cfile > somefile.output
 Then you can plot the "somefile.output" with any tools (matlab,matplotlib...) you like.
 
 #Reminder
-This program implemented the algorithm of "Robust Frequency Burst Detection Algorithm for 
+This program implements the algorithm of "Robust Frequency Burst Detection Algorithm for 
 GSM/GPRS",G. Narendra Varma, Usha Sahu, G. Prabhu Charan. The copyright of this algorithm
 remains to them. Be careful when you use it.

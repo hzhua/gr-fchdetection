@@ -1,3 +1,4 @@
+#License 
 
   Copyright 2014 Zhenhua HAN(hzhua201@gmail.com).
  
@@ -16,12 +17,6 @@
   the Free Software Foundation, Inc., 51 Franklin Street,
   Boston, MA 02110-1301, USA.
 
-
-
-This program implemented the algorithm of "Robust Frequency Burst Detection Algorithm for 
-GSM/GPRS",G. Narendra Varma, Usha Sahu, G. Prabhu Charan. The copyright of this algorithm
-remains to them. Be careful when you use it.
-
 #Usage
 
 <pre><code>
@@ -34,3 +29,8 @@ gr-fchdetection/python$ ./python/detect.py -I input.cfile > somefile.output
 </code></pre>
 
 Then you can plot the "somefile.output" with any tools (matlab,matplotlib...) you like.
+
+#Reminder
+This program implemented the algorithm of "Robust Frequency Burst Detection Algorithm for 
+GSM/GPRS",G. Narendra Varma, Usha Sahu, G. Prabhu Charan. The copyright of this algorithm
+remains to them. Be careful when you use it.

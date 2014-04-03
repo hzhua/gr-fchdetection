@@ -25,7 +25,7 @@ gr-fchdetection/build$ cd build
 gr-fchdetection/build$ cmake ../
 gr-fchdetection/build$ make
 gr-fchdetection/build$ cd ../python
-gr-fchdetection/python$ ./python/detect.py -I input.cfile > somefile.output
+gr-fchdetection/python$ ./detect.py -I input.cfile > somefile.output
 </code></pre>
 
 Then you can plot the "somefile.output" with any tools (matlab,matplotlib...) you like.
